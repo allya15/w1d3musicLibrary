@@ -104,8 +104,12 @@ addTrack("ABCs", "anonymous", "children");
 // adds a playlist to the library
 
 var addPlaylist = function (name) {
-
+  var id = uid();
+  playlists[id] = {id: id, name: name, tracks: [""]};
+  console.log(playlists);
 }
+
+addPlaylist("JIM");
 
 
 // STRETCH:
