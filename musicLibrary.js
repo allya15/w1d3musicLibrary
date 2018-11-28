@@ -75,8 +75,12 @@ var printPlaylist = function (playlistId) {
 // adds an existing track to an existing playlist
 
 var addTrackToPlaylist = function (trackId, playlistId) {
-
+  var trackAdd = playlists[playlistId].tracks;
+  trackAdd.push(trackId);
+  console.log(playlists[playlistId].tracks);
 }
+
+// addTrackToPlaylist("t03", "p01");
 
 
 // generates a unique id
@@ -86,7 +90,7 @@ var uid = function() {
   return Math.floor((1 + Math.random()) * 0x10000).toString(16).substring(1);
 }
 
-
+// console.log(uid());
 // adds a track to the library
 
 var addTrack = function (name, artist, album) {
