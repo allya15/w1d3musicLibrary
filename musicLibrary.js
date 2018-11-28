@@ -94,8 +94,11 @@ var uid = function() {
 // adds a track to the library
 
 var addTrack = function (name, artist, album) {
-
+  var i = uid();
+  tracks[i] = {id: i, name: name, artist: artist, album: album};
 }
+
+addTrack("ABCs", "anonymous", "children");
 
 
 // adds a playlist to the library
