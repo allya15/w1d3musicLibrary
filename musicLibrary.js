@@ -24,15 +24,22 @@ var library = {
              }
 }
 
+var playlists = library.playlists;
+var tracks = library.tracks;
+
 // FUNCTIONS TO IMPLEMENT:
 
 // prints a list of all playlists, in the form:
 // p01: Coding Music - 2 tracks
 // p02: Other Playlist - 1 tracks
 
-var printPlaylists = function () {
-
+var printPlaylists = function (playlists) {
+  for (let i in playlists) {
+    console.log(playlists[i].id + ": " + playlists[i].name + " - " + playlists[i].tracks.length + " tracks");
+  }
 }
+
+printPlaylists(playlists);
 
 
 // prints a list of all tracks, in the form:
