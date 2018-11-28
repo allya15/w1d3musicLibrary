@@ -62,9 +62,15 @@ var printTracks = function () {
 // t02: Model View Controller by James Dempsey (WWDC 2003)
 
 var printPlaylist = function (playlistId) {
-
+  var plTracks = playlists[playlistId].tracks;
+  console.log(playlists[playlistId].id + ": " + playlists[playlistId].name + " - " + playlists[playlistId].tracks.length + " tracks");
+  for (i = 0; i < plTracks.length; i++) {
+    let currentTrackId = tracks[plTracks[i]];
+    console.log(currentTrackId.id + ": " + currentTrackId.name + " by " + currentTrackId.artist + " (" + currentTrackId.album + ")");
+  }
 }
 
+// printPlaylist("p01");
 
 // adds an existing track to an existing playlist
 
