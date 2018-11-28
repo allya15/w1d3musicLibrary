@@ -33,13 +33,13 @@ var tracks = library.tracks;
 // p01: Coding Music - 2 tracks
 // p02: Other Playlist - 1 tracks
 
-var printPlaylists = function (playlists) {
+var printPlaylists = function () {
   for (let i in playlists) {
     console.log(playlists[i].id + ": " + playlists[i].name + " - " + playlists[i].tracks.length + " tracks");
   }
 }
 
-printPlaylists(playlists);
+// printPlaylists();
 
 
 // prints a list of all tracks, in the form:
@@ -48,8 +48,12 @@ printPlaylists(playlists);
 // t03: Four Thirty-Three by John Cage (Woodstock 1952)
 
 var printTracks = function () {
-
+  for (let i in tracks) {
+    console.log(tracks[i].id + ": " + tracks[i].name + " by " + tracks[i].artist + " (" + tracks[i].album + ")");
+  }
 }
+
+// printTracks();
 
 
 // prints a list of tracks for a given playlist, in the form:
